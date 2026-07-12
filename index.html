@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Meta tags: informações sobre o site para o navegador -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título que aparece na aba do navegador -->
+  <title>Luar Raqs — Dança do Ventre</title>
+
+  <!-- Fonte customizada do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Arquivo de estilos (deve existir na mesma pasta) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="logo">✨ Luar Raqs</h1>
+
+      <!-- Botão hamburguer — aparece só no celular -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#cultura">Cultura</a></li>
+          <li><a href="#estilos">Estilos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== BANNER PRINCIPAL ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero__overlay">
+      <h2 class="hero__title">Vista a beleza da dança do ventre</h2>
+      <p class="hero__subtitle">
+        Roupas e acessórios artesanais para brilhar no palco e na prática
+      </p>
+      <div class="hero__buttons">
+        <a href="#colecao" class="btn btn--primary">Ver coleção</a>
+        <a href="#cultura" class="btn btn--outline">Conhecer a cultura</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COLEÇÃO / PRODUTOS ========== -->
+  <section class="section colecao" id="colecao">
+    <div class="container">
+      <h2 class="section__title">Nossa Coleção</h2>
+      <p class="section__subtitle">Peças feitas com amor, tecidos especiais e muito brilho</p>
+
+      <div class="produtos__grid">
+
+        <div class="card">
+          <img
+            src= "imagens/img_dressgolden.png"
+            alt="Traje de dança do ventre dourado bordado"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Vestido Bordado Dourado</h3>
+            <p class="card__desc">Vestido completo com bordados artesanais e pedrarias.</p>
+            <span class="card__price">R$ 980,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400"
+            alt="Saia fluida de dança"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Saia Fluida com Fendas</h3>
+            <p class="card__desc">Saia em chiffon de seda com movimento suave e elegante.</p>
+            <span class="card__price">R$ 150,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1602827114685-efbb2717da21?w=400"
+            alt="Cinto de moedas"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Cinto de Moedas</h3>
+            <p class="card__desc">Cinto com moedas douradas para marcar cada movimento.</p>
+            <span class="card__price">R$ 95,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1583744946564-b52d9b8db82e?w=400"
+            alt="Véu de dança"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Véu de Seda Colorido</h3>
+            <p class="card__desc">Véu leve e fluido, ideal para coreografias e apresentações.</p>
+            <span class="card__price">R$ 80,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"
+            alt="Top bordado"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Top Bordado com Franjas</h3>
+            <p class="card__desc">Top artesanal com franjas e strass para apresentações.</p>
+            <span class="card__price">R$ 210,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"
+            alt="Acessórios orientais"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h3 class="card__title">Kit Acessórios Orientais</h3>
+            <p class="card__desc">Brincos, pulseiras e tiara temáticos para completar o look.</p>
+            <span class="card__price">R$ 120,00</span>
+            <a href="#contato" class="btn btn--primary btn--small">Encomendar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CULTURA ========== -->
+  <section class="section cultura" id="cultura">
+    <div class="container cultura__inner">
+      <div class="cultura__texto">
+        <h2 class="section__title section__title--light">A Arte da Dança do Ventre</h2>
+        <p>
+          A dança do ventre é uma das formas de expressão artística mais antigas do mundo.
+          Com raízes no Oriente Médio e no Norte da África, ela celebra a feminilidade,
+          a conexão com o corpo e a riqueza cultural de séculos de história.
+        </p>
+        <p>
+          Muito além do entretenimento, a dança do ventre é uma prática que fortalece
+          a autoestima, desenvolve a consciência corporal e conecta as bailarinas
+          a uma tradição milenar de beleza e movimento.
+        </p>
+        <p>
+          Nossas peças são criadas para honrar essa arte — com tecidos nobres,
+          bordados artesanais e muito brilho para cada passo da bailarina.
+        </p>
+      </div>
+      <div class="cultura__imagem">
+        <img
+          src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=500"
+          alt="Bailarina de dança do ventre"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ESTILOS ========== -->
+  <section class="section estilos" id="estilos">
+    <div class="container">
+      <h2 class="section__title">Estilos da Dança</h2>
+      <p class="section__subtitle">Conheça as diferentes expressões dessa arte milenar</p>
+
+      <div class="estilos__grid">
+
+        <div class="estilo__card">
+          <div class="estilo__icon">🌙</div>
+          <h3>Raqs Sharqi</h3>
+          <p>
+            O estilo mais clássico e elegante. Muito presente em apresentações formais,
+            caracteriza-se por movimentos suaves, expressivos e sofisticados.
+          </p>
+        </div>
+
+        <div class="estilo__card">
+          <div class="estilo__icon">🥁</div>
+          <h3>Saidi</h3>
+          <p>
+            Originário do Alto Egito, é um estilo vibrante e marcante.
+            Os movimentos são mais firmes e enérgicos, com influências folclóricas.
+          </p>
+        </div>
+
+        <div class="estilo__card">
+          <div class="estilo__icon">🌿</div>
+          <h3>Tribal Fusion</h3>
+          <p>
+            Fusão contemporânea que mistura a dança do ventre com elementos
+            de dança tribal, flamenco e outras danças do mundo. Visual marcante e poderoso.
+          </p>
+        </div>
+
+        <div class="estilo__card">
+          <div class="estilo__icon">👗</div>
+          <h3>Khaleegy</h3>
+          <p>
+            Dança típica do Golfo Pérsico, com saias amplas e movimentos
+            marcantes de cabelo e ombros. Alegre, festiva e cheia de graça.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FORMULÁRIO DE CONTATO ========== -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <h2 class="section__title">Faça sua Encomenda</h2>
+      <p class="section__subtitle">Preencha o formulário e entraremos em contato em até 24h</p>
+
+      <form class="form" id="contatoForm" novalidate>
+
+        <div class="form__grupo">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          <span class="form__erro" id="erroNome"></span>
+        </div>
+
+        <div class="form__grupo">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          <span class="form__erro" id="erroEmail"></span>
+        </div>
+
+        <div class="form__grupo">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
+        </div>
+
+        <div class="form__grupo">
+          <label for="produto">Produto de interesse *</label>
+          <select id="produto" name="produto" required>
+            <option value="">Selecione um produto</option>
+            <option value="vestido">Vestido Bordado</option>
+            <option value="saia">Saia Fluida</option>
+            <option value="cinto">Cinto de Moedas</option>
+            <option value="veu">Véu de Seda</option>
+            <option value="top">Top Bordado</option>
+            <option value="acessorios">Kit Acessórios</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="form__erro" id="erroProduto"></span>
+        </div>
+
+        <div class="form__grupo">
+          <label for="tamanho">Tamanho</label>
+          <select id="tamanho" name="tamanho">
+            <option value="">Selecione</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+          </select>
+        </div>
+
+        <div class="form__grupo form__grupo--full">
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="4"
+            placeholder="Descreva sua encomenda, cores, personalização..."
+          ></textarea>
+        </div>
+
+        <div class="form__grupo form__grupo--full">
+          <button type="submit" class="btn btn--primary btn--large">
+            Enviar encomenda ✨
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Mensagem de sucesso — aparece após o envio via JavaScript -->
+      <div class="form__sucesso" id="formSucesso" style="display:none;">
+        <p>✅ Encomenda enviada com sucesso! Entraremos em contato em breve.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <h3>✨ Luarraqs</h3>
+        <p>Moda, elegância e tradição na dança do ventre.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#cultura">Cultura</a></li>
+          <li><a href="#estilos">Estilos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer__contato">
+        <h4>Contato</h4>
+        <p>📧 contato@luarraqs.com</p>
+        <p>📱 (11) 99999-9999</p>
+        <p>📍 São Paulo, SP</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Luarraqs — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript — deve ser o último antes de fechar o </body> -->
+  <script src="script.js"></script>
+
+</body>
+</html>

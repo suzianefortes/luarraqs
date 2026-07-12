@@ -1,0 +1,586 @@
+/* ===========================
+   VARIÁVEIS DE CORES E FONTES
+   =========================== */
+:root {
+  --fundo-principal: #F5EFE6;
+  --cor-forte: #6B1A2A;
+  --cor-forte-2: #7A1E3A;
+  --destaque: #C9A84C;
+  --destaque-claro: #e0c36a;
+  --texto: #1C1C1C;
+  --texto-claro: #FFFFFF;
+  --cinza: #666666;
+  --borda: #e0d5c5;
+  --fonte-titulo: 'Cormorant Garamond', serif;
+  --fonte-texto: 'Lato', sans-serif;
+}
+
+/* ===========================
+   RESET E BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Scroll suave ao clicar nos links do menu */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background-color: var(--fundo-principal);
+  line-height: 1.7;
+}
+
+/* ===========================
+   CONTAINER
+   Limita a largura do conteúdo e centraliza
+   =========================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   CABEÇALHO
+   =========================== */
+.header {
+  background-color: var(--cor-forte);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-family: var(--fonte-titulo);
+  color: var(--destaque);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav__list a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.nav__list a:hover {
+  color: var(--destaque);
+}
+
+/* Botão hamburguer — visível só no celular */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--destaque);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===========================
+   HERO — BANNER PRINCIPAL
+   =========================== */
+.hero {
+  background-image: url('imagens/imagem_1.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__overlay {
+  /* Overlay com a cor forte do site para manter identidade visual */
+  background-color: rgba(107, 26, 42, 0.70);
+  padding: 60px 40px;
+  border-radius: 8px;
+  max-width: 700px;
+}
+
+.hero__title {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  color: var(--destaque-claro);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--texto-claro);
+  margin-bottom: 32px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: var(--fonte-texto);
+}
+
+/* Botão principal — dourado */
+.btn--primary {
+  background-color: var(--destaque);
+  color: var(--cor-forte);
+  border-color: var(--destaque);
+}
+
+.btn--primary:hover {
+  background-color: var(--destaque-claro);
+  border-color: var(--destaque-claro);
+}
+
+/* Botão contorno — transparente com borda dourada */
+.btn--outline {
+  background: transparent;
+  border-color: var(--destaque);
+  color: var(--destaque);
+}
+
+.btn--outline:hover {
+  background-color: var(--destaque);
+  color: var(--cor-forte);
+}
+
+.btn--small {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+.btn--large {
+  padding: 16px 48px;
+  font-size: 1.05rem;
+}
+
+/* ===========================
+   SEÇÕES — ESTILO PADRÃO
+   =========================== */
+.section {
+  padding: 80px 0;
+}
+
+.section__title {
+  font-family: var(--fonte-titulo);
+  font-size: 2.4rem;
+  color: var(--cor-forte);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Versão clara do título — usada em fundos escuros */
+.section__title--light {
+  color: var(--destaque-claro);
+}
+
+.section__subtitle {
+  text-align: center;
+  color: var(--cinza);
+  margin-bottom: 48px;
+  font-size: 1rem;
+}
+
+/* ===========================
+   COLEÇÃO — CARDS DE PRODUTOS
+   =========================== */
+.colecao {
+  background-color: var(--fundo-principal);
+}
+
+.produtos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  /* Sobe levemente ao passar o mouse */
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(107, 26, 42, 0.18);
+}
+
+.card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  color: var(--cor-forte);
+}
+
+.card__desc {
+  font-size: 0.9rem;
+  color: var(--cinza);
+  flex: 1;
+}
+
+/* Preço em dourado para destacar */
+.card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--destaque);
+}
+
+/* ===========================
+   SEÇÃO CULTURA
+   =========================== */
+.cultura {
+  background-color: var(--cor-forte-2);
+  color: var(--texto-claro);
+}
+
+.cultura__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cultura__texto p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  opacity: 0.92;
+  color: var(--texto-claro);
+}
+
+.cultura__imagem img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================
+   SEÇÃO ESTILOS
+   =========================== */
+.estilos {
+  /* Fundo levemente diferente para separar visualmente das outras seções */
+  background-color: #EFE5D8;
+}
+
+.estilos__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.estilo__card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  /* Borda superior dourada como detalhe elegante */
+  border-top: 4px solid var(--destaque);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.estilo__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(107, 26, 42, 0.12);
+}
+
+.estilo__icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.estilo__card h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--cor-forte);
+  margin-bottom: 10px;
+}
+
+.estilo__card p {
+  font-size: 0.95rem;
+  color: var(--cinza);
+}
+
+/* ===========================
+   FORMULÁRIO DE CONTATO
+   =========================== */
+.contato {
+  background-color: var(--fundo-principal);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.form__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Ocupa as duas colunas inteiras */
+.form__grupo--full {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.form__grupo label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--cor-forte);
+}
+
+.form__grupo input,
+.form__grupo select,
+.form__grupo textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  background-color: #FBF7F2;
+  color: var(--texto);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaque ao clicar no campo */
+.form__grupo input:focus,
+.form__grupo select:focus,
+.form__grupo textarea:focus {
+  outline: none;
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.25);
+}
+
+/* Mensagem de erro em vermelho */
+.form__erro {
+  color: #c0392b;
+  font-size: 0.8rem;
+  min-height: 16px;
+}
+
+/* Mensagem de sucesso após envio */
+.form__sucesso {
+  text-align: center;
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #d4edda;
+  border-radius: 6px;
+  color: #155724;
+  font-weight: 700;
+}
+
+/* ===========================
+   RODAPÉ
+   =========================== */
+.footer {
+  background-color: var(--cor-forte);
+  color: var(--texto-claro);
+  padding-top: 48px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer__brand h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--destaque);
+  margin-bottom: 10px;
+}
+
+.footer__brand p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer__links h4,
+.footer__contato h4 {
+  color: var(--destaque);
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+.footer__links ul {
+  list-style: none;
+}
+
+.footer__links ul li {
+  margin-bottom: 8px;
+}
+
+.footer__links ul a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__links ul a:hover {
+  color: var(--destaque);
+}
+
+.footer__contato p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+/* Linha separadora + copyright */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 16px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* ===========================
+   ANIMAÇÃO DE ENTRADA
+   Os cards começam invisíveis e aparecem
+   ao rolar a página (controlado pelo script.js)
+   =========================== */
+.invisivel {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   RESPONSIVO — CELULAR
+   Telas com até 768px de largura
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Exibe o botão hamburguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Esconde o menu por padrão no mobile */
+  .nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Quando o JS adiciona a classe "aberto", o menu aparece */
+  .nav.aberto {
+    display: block;
+    background-color: var(--cor-forte);
+    padding: 16px 0;
+  }
+
+  /* Links do menu empilhados verticalmente */
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__list li a {
+    display: block;
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header__inner {
+    flex-wrap: wrap;
+  }
+
+  /* Hero menor no celular */
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__overlay {
+    padding: 40px 24px;
+    margin: 0 16px;
+  }
+
+  /* Todos os grids viram 1 coluna no celular */
+  .produtos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cultura__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .estilos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* Formulário vira 1 coluna */
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
