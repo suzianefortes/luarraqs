@@ -2,22 +2,16 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- Meta tags: informações sobre o site para o navegador -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Título que aparece na aba do navegador -->
   <title>Luar Raqs — Dança do Ventre</title>
 
-  <!-- Fonte customizada do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Arquivo de estilos (deve existir na mesma pasta) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -27,12 +21,7 @@
   <header class="header">
     <div class="container header__inner">
       <h1 class="logo">✨ Luar Raqs</h1>
-
-      <!-- Botão hamburguer — aparece só no celular -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        ☰
-      </button>
-
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
       <nav class="nav" id="mainNav">
         <ul class="nav__list">
           <li><a href="#inicio">Início</a></li>
@@ -67,12 +56,15 @@
 
       <div class="produtos__grid">
 
+        <!-- Card 1 ✅ CORRIGIDO -->
         <div class="card">
-          <img
-            src= "imagens/img_dressgolden.png"
-            alt="Traje de dança do ventre dourado bordado"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="imagens/img_dressgolden.png"
+              alt="Traje de dança do ventre dourado bordado"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Vestido Bordado Dourado</h3>
             <p class="card__desc">Vestido completo com bordados artesanais e pedrarias.</p>
@@ -81,12 +73,15 @@
           </div>
         </div>
 
+        <!-- Card 2 -->
         <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400"
-            alt="Saia fluida de dança"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400"
+              alt="Saia fluida de dança"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Saia Fluida com Fendas</h3>
             <p class="card__desc">Saia em chiffon de seda com movimento suave e elegante.</p>
@@ -95,12 +90,15 @@
           </div>
         </div>
 
+        <!-- Card 3 -->
         <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1602827114685-efbb2717da21?w=400"
-            alt="Cinto de moedas"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1602827114685-efbb2717da21?w=400"
+              alt="Cinto de moedas"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Cinto de Moedas</h3>
             <p class="card__desc">Cinto com moedas douradas para marcar cada movimento.</p>
@@ -109,12 +107,15 @@
           </div>
         </div>
 
+        <!-- Card 4 -->
         <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1583744946564-b52d9b8db82e?w=400"
-            alt="Véu de dança"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1583744946564-b52d9b8db82e?w=400"
+              alt="Véu de dança"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Véu de Seda Colorido</h3>
             <p class="card__desc">Véu leve e fluido, ideal para coreografias e apresentações.</p>
@@ -123,12 +124,15 @@
           </div>
         </div>
 
+        <!-- Card 5 -->
         <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"
-            alt="Top bordado"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"
+              alt="Top bordado"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Top Bordado com Franjas</h3>
             <p class="card__desc">Top artesanal com franjas e strass para apresentações.</p>
@@ -137,12 +141,15 @@
           </div>
         </div>
 
+        <!-- Card 6 -->
         <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"
-            alt="Acessórios orientais"
-            class="card__img"
-          />
+          <div class="card__img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"
+              alt="Acessórios orientais"
+              class="card__img"
+            />
+          </div>
           <div class="card__body">
             <h3 class="card__title">Kit Acessórios Orientais</h3>
             <p class="card__desc">Brincos, pulseiras e tiara temáticos para completar o look.</p>
@@ -160,20 +167,14 @@
     <div class="container cultura__inner">
       <div class="cultura__texto">
         <h2 class="section__title section__title--light">A Arte da Dança do Ventre</h2>
-        <p>
-          A dança do ventre é uma das formas de expressão artística mais antigas do mundo.
-          Com raízes no Oriente Médio e no Norte da África, ela celebra a feminilidade,
-          a conexão com o corpo e a riqueza cultural de séculos de história.
-        </p>
-        <p>
-          Muito além do entretenimento, a dança do ventre é uma prática que fortalece
-          a autoestima, desenvolve a consciência corporal e conecta as bailarinas
-          a uma tradição milenar de beleza e movimento.
-        </p>
-        <p>
-          Nossas peças são criadas para honrar essa arte — com tecidos nobres,
-          bordados artesanais e muito brilho para cada passo da bailarina.
-        </p>
+        <p>A dança do ventre é uma das formas de expressão artística mais antigas do mundo.
+        Com raízes no Oriente Médio e no Norte da África, ela celebra a feminilidade,
+        a conexão com o corpo e a riqueza cultural de séculos de história.</p>
+        <p>Muito além do entretenimento, a dança do ventre é uma prática que fortalece
+        a autoestima, desenvolve a consciência corporal e conecta as bailarinas
+        a uma tradição milenar de beleza e movimento.</p>
+        <p>Nossas peças são criadas para honrar essa arte — com tecidos nobres,
+        bordados artesanais e muito brilho para cada passo da bailarina.</p>
       </div>
       <div class="cultura__imagem">
         <img
@@ -195,37 +196,29 @@
         <div class="estilo__card">
           <div class="estilo__icon">🌙</div>
           <h3>Raqs Sharqi</h3>
-          <p>
-            O estilo mais clássico e elegante. Muito presente em apresentações formais,
-            caracteriza-se por movimentos suaves, expressivos e sofisticados.
-          </p>
+          <p>O estilo mais clássico e elegante. Muito presente em apresentações formais,
+          caracteriza-se por movimentos suaves, expressivos e sofisticados.</p>
         </div>
 
         <div class="estilo__card">
           <div class="estilo__icon">🥁</div>
           <h3>Saidi</h3>
-          <p>
-            Originário do Alto Egito, é um estilo vibrante e marcante.
-            Os movimentos são mais firmes e enérgicos, com influências folclóricas.
-          </p>
+          <p>Originário do Alto Egito, é um estilo vibrante e marcante.
+          Os movimentos são mais firmes e enérgicos, com influências folclóricas.</p>
         </div>
 
         <div class="estilo__card">
           <div class="estilo__icon">🌿</div>
           <h3>Tribal Fusion</h3>
-          <p>
-            Fusão contemporânea que mistura a dança do ventre com elementos
-            de dança tribal, flamenco e outras danças do mundo. Visual marcante e poderoso.
-          </p>
+          <p>Fusão contemporânea que mistura a dança do ventre com elementos
+          de dança tribal, flamenco e outras danças do mundo. Visual marcante e poderoso.</p>
         </div>
 
         <div class="estilo__card">
           <div class="estilo__icon">👗</div>
           <h3>Khaleegy</h3>
-          <p>
-            Dança típica do Golfo Pérsico, com saias amplas e movimentos
-            marcantes de cabelo e ombros. Alegre, festiva e cheia de graça.
-          </p>
+          <p>Dança típica do Golfo Pérsico, com saias amplas e movimentos
+          marcantes de cabelo e ombros. Alegre, festiva e cheia de graça.</p>
         </div>
 
       </div>
@@ -286,12 +279,8 @@
 
         <div class="form__grupo form__grupo--full">
           <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="4"
-            placeholder="Descreva sua encomenda, cores, personalização..."
-          ></textarea>
+          <textarea id="mensagem" name="mensagem" rows="4"
+            placeholder="Descreva sua encomenda, cores, personalização..."></textarea>
         </div>
 
         <div class="form__grupo form__grupo--full">
@@ -302,7 +291,6 @@
 
       </form>
 
-      <!-- Mensagem de sucesso — aparece após o envio via JavaScript -->
       <div class="form__sucesso" id="formSucesso" style="display:none;">
         <p>✅ Encomenda enviada com sucesso! Entraremos em contato em breve.</p>
       </div>
@@ -339,7 +327,12 @@
     </div>
   </footer>
 
-  <!-- JavaScript — deve ser o último antes de fechar o </body> -->
+  <!-- Modal de imagem ampliada -->
+  <div id="modal-imagem" class="modal-img">
+    <span class="modal-img__fechar">&times;</span>
+    <img id="modal-imagem__foto" src="" alt="Imagem ampliada" />
+  </div>
+
   <script src="script.js"></script>
 
 </body>

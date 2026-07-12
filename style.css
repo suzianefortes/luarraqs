@@ -15,9 +15,6 @@
   --fonte-texto: 'Lato', sans-serif;
 }
 
-/* ===========================
-   RESET E BASE
-   =========================== */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +22,6 @@
 }
 
 html {
-  /* Scroll suave ao clicar nos links do menu */
   scroll-behavior: smooth;
 }
 
@@ -36,10 +32,6 @@ body {
   line-height: 1.7;
 }
 
-/* ===========================
-   CONTAINER
-   Limita a largura do conteúdo e centraliza
-   =========================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -64,7 +56,6 @@ body {
   justify-content: space-between;
 }
 
-/* Logo */
 .logo {
   font-family: var(--fonte-titulo);
   color: var(--destaque);
@@ -73,7 +64,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Menu de navegação */
 .nav__list {
   list-style: none;
   display: flex;
@@ -92,7 +82,6 @@ body {
   color: var(--destaque);
 }
 
-/* Botão hamburguer — visível só no celular */
 .menu-toggle {
   display: none;
   background: none;
@@ -103,7 +92,7 @@ body {
 }
 
 /* ===========================
-   HERO — BANNER PRINCIPAL
+   HERO
    =========================== */
 .hero {
   background-image: url('imagens/imagem_1.png');
@@ -117,7 +106,6 @@ body {
 }
 
 .hero__overlay {
-  /* Overlay com a cor forte do site para manter identidade visual */
   background-color: rgba(107, 26, 42, 0.70);
   padding: 60px 40px;
   border-radius: 8px;
@@ -161,7 +149,6 @@ body {
   font-family: var(--fonte-texto);
 }
 
-/* Botão principal — dourado */
 .btn--primary {
   background-color: var(--destaque);
   color: var(--cor-forte);
@@ -173,7 +160,6 @@ body {
   border-color: var(--destaque-claro);
 }
 
-/* Botão contorno — transparente com borda dourada */
 .btn--outline {
   background: transparent;
   border-color: var(--destaque);
@@ -196,7 +182,7 @@ body {
 }
 
 /* ===========================
-   SEÇÕES — ESTILO PADRÃO
+   SEÇÕES
    =========================== */
 .section {
   padding: 80px 0;
@@ -210,7 +196,6 @@ body {
   margin-bottom: 12px;
 }
 
-/* Versão clara do título — usada em fundos escuros */
 .section__title--light {
   color: var(--destaque-claro);
 }
@@ -223,7 +208,7 @@ body {
 }
 
 /* ===========================
-   COLEÇÃO — CARDS DE PRODUTOS
+   COLEÇÃO — CARDS
    =========================== */
 .colecao {
   background-color: var(--fundo-principal);
@@ -244,15 +229,65 @@ body {
 }
 
 .card:hover {
-  /* Sobe levemente ao passar o mouse */
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(107, 26, 42, 0.18);
 }
 
+/* ===========================
+   EFEITO LUPA NOS CARDS
+   =========================== */
+.card__img-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  cursor: zoom-in;
+}
+
 .card__img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card__img-wrapper:hover .card__img {
+  transform: scale(1.2);
+}
+
+.card__img-wrapper::after {
+  content: '🔍';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card__img-wrapper:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card__img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(107, 26, 42, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card__img-wrapper:hover::before {
+  opacity: 1;
 }
 
 .card__body {
@@ -274,7 +309,6 @@ body {
   flex: 1;
 }
 
-/* Preço em dourado para destacar */
 .card__price {
   font-size: 1.1rem;
   font-weight: 700;
@@ -282,7 +316,7 @@ body {
 }
 
 /* ===========================
-   SEÇÃO CULTURA
+   CULTURA
    =========================== */
 .cultura {
   background-color: var(--cor-forte-2);
@@ -310,10 +344,9 @@ body {
 }
 
 /* ===========================
-   SEÇÃO ESTILOS
+   ESTILOS
    =========================== */
 .estilos {
-  /* Fundo levemente diferente para separar visualmente das outras seções */
   background-color: #EFE5D8;
 }
 
@@ -328,7 +361,6 @@ body {
   border-radius: 8px;
   padding: 32px 24px;
   text-align: center;
-  /* Borda superior dourada como detalhe elegante */
   border-top: 4px solid var(--destaque);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -356,7 +388,7 @@ body {
 }
 
 /* ===========================
-   FORMULÁRIO DE CONTATO
+   FORMULÁRIO
    =========================== */
 .contato {
   background-color: var(--fundo-principal);
@@ -376,7 +408,6 @@ body {
   gap: 6px;
 }
 
-/* Ocupa as duas colunas inteiras */
 .form__grupo--full {
   grid-column: 1 / -1;
   text-align: center;
@@ -401,7 +432,6 @@ body {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Destaque ao clicar no campo */
 .form__grupo input:focus,
 .form__grupo select:focus,
 .form__grupo textarea:focus {
@@ -410,14 +440,12 @@ body {
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.25);
 }
 
-/* Mensagem de erro em vermelho */
 .form__erro {
   color: #c0392b;
   font-size: 0.8rem;
   min-height: 16px;
 }
 
-/* Mensagem de sucesso após envio */
 .form__sucesso {
   text-align: center;
   margin-top: 24px;
@@ -487,7 +515,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Linha separadora + copyright */
 .footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
@@ -498,8 +525,6 @@ body {
 
 /* ===========================
    ANIMAÇÃO DE ENTRADA
-   Os cards começam invisíveis e aparecem
-   ao rolar a página (controlado pelo script.js)
    =========================== */
 .invisivel {
   opacity: 0;
@@ -513,30 +538,72 @@ body {
 }
 
 /* ===========================
+   MODAL DE IMAGEM AMPLIADA
+   =========================== */
+.modal-img {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 10, 15, 0.92);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.modal-img.ativo {
+  display: flex;
+}
+
+.modal-img img {
+  max-width: 85%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: zoomEntrada 0.3s ease;
+}
+
+@keyframes zoomEntrada {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.modal-img__fechar {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 2.5rem;
+  color: var(--destaque);
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.modal-img__fechar:hover {
+  color: #fff;
+}
+
+/* ===========================
    RESPONSIVO — CELULAR
-   Telas com até 768px de largura
    =========================== */
 @media (max-width: 768px) {
 
-  /* Exibe o botão hamburguer */
-  .menu-toggle {
-    display: block;
-  }
+  .menu-toggle { display: block; }
 
-  /* Esconde o menu por padrão no mobile */
   .nav {
     display: none;
     width: 100%;
   }
 
-  /* Quando o JS adiciona a classe "aberto", o menu aparece */
   .nav.aberto {
     display: block;
     background-color: var(--cor-forte);
     padding: 16px 0;
   }
 
-  /* Links do menu empilhados verticalmente */
   .nav__list {
     flex-direction: column;
     gap: 0;
@@ -548,39 +615,18 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .header__inner {
-    flex-wrap: wrap;
-  }
+  .header__inner { flex-wrap: wrap; }
 
-  /* Hero menor no celular */
-  .hero__title {
-    font-size: 2rem;
-  }
+  .hero__title { font-size: 2rem; }
 
   .hero__overlay {
     padding: 40px 24px;
     margin: 0 16px;
   }
 
-  /* Todos os grids viram 1 coluna no celular */
-  .produtos__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cultura__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .estilos__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer__inner {
-    grid-template-columns: 1fr;
-  }
-
-  /* Formulário vira 1 coluna */
-  .form {
-    grid-template-columns: 1fr;
-  }
+  .produtos__grid  { grid-template-columns: 1fr; }
+  .cultura__inner  { grid-template-columns: 1fr; }
+  .estilos__grid   { grid-template-columns: 1fr; }
+  .footer__inner   { grid-template-columns: 1fr; }
+  .form            { grid-template-columns: 1fr; }
 }
